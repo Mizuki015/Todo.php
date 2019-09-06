@@ -59,7 +59,7 @@ function h($str)
                 </thead>
                 <tbody>
                 <?php
-                foreach($todo->getAll() as $content) { ?>
+                foreach($todo->getAll() as $content):?>
                     <tr>
                         <td><?php echo h($content['name'])?></td>
                         <td><?php echo h($content['due_date'])?></td>
@@ -67,10 +67,10 @@ function h($str)
                             <a class="text-success" href="edit.php">EDIT</a>
                         </td>
                         <td>
-                            <a class="text-danger" href="delete.php">DELETE</a>
+                        <a class="text-danger" href="delete.php?id=<?php echo $content['id']; ?>">DELETE</a>
                         </td>
                     </tr>
-                  <?php } ?>
+                    <?php endforeach; ?>
                     <!-- <tr>
                         <td></td>
                         <td>2019/08/21</td>

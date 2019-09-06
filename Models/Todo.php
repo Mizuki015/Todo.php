@@ -57,4 +57,10 @@ class Todo
 
     return $results;
   }
+
+  public function delete()
+  {
+
+  }
 }
+?>
